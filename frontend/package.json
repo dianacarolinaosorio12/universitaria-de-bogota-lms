@@ -1,0 +1,23 @@
+{
+  "name": "ub-lms-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Frontend monorepo for UB LMS Platform",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "dev:shell": "pnpm --filter @ub-lms/shell dev",
+    "dev:auth": "pnpm --filter @ub-lms/auth dev",
+    "build:shell": "pnpm --filter @ub-lms/shell build",
+    "build:auth": "pnpm --filter @ub-lms/auth build"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0"
+  },
+  "packageManager": "pnpm@10.29.3",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
